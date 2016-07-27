@@ -30,11 +30,11 @@ var packageUI = (function(packageUI, $, undefined){
 			var that = this;
 			$(".latestVideoOpen").on("click", function(e){
 				e.preventDefault();
-				that.openMenu( that.sideMenu01 );
+				that.openMenu( that.sideMenu01, that.sideMenu02  );
 			});
 			$(".bestVideoOpen").on("click", function(e){
 				e.preventDefault();
-				that.openMenu( that.sideMenu02 );
+				that.openMenu( that.sideMenu02, that.sideMenu01 );
 			});
 			$(this.sideMenu01).find(".closeBtn").on("click", function(e){
 				e.preventDefault()
@@ -46,11 +46,20 @@ var packageUI = (function(packageUI, $, undefined){
 			});
 
 		};
-		this.openMenu = function( info ){
+		this.openMenu = function( info, state ){
 			if( info ){
 				$( info ).addClass("active").stop().animate({
 					right : 0
 				},400)
+			}
+			if( state == this.sideMenu02 ){
+				$( state ).stop().animate({ right : -435 },400, function(){
+					$(this).removeClass("active");
+				});
+			}else if( state == this.sideMenu01 ){
+				$( state ).stop().animate({ right : -564 },400, function(){
+					$(this).removeClass("active");
+				})
 			}
 		};
 		this.closeMenu = function( info ){

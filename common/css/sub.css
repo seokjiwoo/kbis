@@ -162,3 +162,4 @@
 .planTable table tbody tr td div.pass{background:#f0ece4;}
 .planTable table tbody tr td div.on{border:2px solid #eb6253;margin:-2px;}
 .planTable table tbody tr td div.off p{color:#aaa;}
+.planTable table tbody tr td div.on p a{padding-top:0;}

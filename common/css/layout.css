@@ -24,15 +24,22 @@
 .gnbArea .gnb > ul > li.m05 > a{background:url("../../images/img/img_gnb05.png") no-repeat center center;}
 .gnbArea .gnb > ul > li.m06 > a{background:url("../../images/img/img_gnb06.png") no-repeat center center;}
 .gnbArea .gnb > ul > li.m07 > a{background:url("../../images/img/img_gnb07.png") no-repeat center center;}
+
+/* 2뎁스 없는 메뉴에도 오버효과 추가 */
+.gnbArea .gnb > ul > li.m01 a:hover{width:151px;height:64px;background:#fff url("../../images/img/img_gnb01_on.png") no-repeat center center;border:3px solid #383324;}
+.gnbArea .gnb > ul > li.m03 a:hover{width:151px;height:64px;background:#fff url("../../images/img/img_gnb03_on.png") no-repeat center center;border:3px solid #383324;}
+.gnbArea .gnb > ul > li.m05 a:hover{width:151px;height:64px;background:#fff url("../../images/img/img_gnb05_on.png") no-repeat center center;border:3px solid #383324;}
+.gnbArea .gnb > ul > li.m06 a:hover{width:151px;height:64px;background:#fff url("../../images/img/img_gnb06_on.png") no-repeat center center;border:3px solid #383324;}
+
 .gnbArea .gnb dl{position:absolute;left:-20px;top:0;z-index:20;width:190px;border:3px solid #383324;background:#fff;display:none;}
 .gnbArea .gnb dl dt a{display:block;height:67px;}
 .gnbArea .gnb dl dd{border-top:1px solid #f0efee;}
 .gnbArea .gnb dl dd a{height:48px;display:block;padding-left:23px;font-family:"nanumbd",Helvetica,Sans-serif;}
 .gnbArea .gnb dl dd a:hover{background:#6f6358;color:#fff;}
 .gnbArea .gnb dl dd a span{display:block;padding-top:16px;}
-.gnbArea .gnb dl dt.m01 a{background:url("../../images/img/img_gnb02.png") no-repeat center 23px;}
-.gnbArea .gnb dl dt.m04 a{background:url("../../images/img/img_gnb04.png") no-repeat center 23px;}
-.gnbArea .gnb dl dt.m07 a{background:url("../../images/img/img_gnb07.png") no-repeat center 23px;}
+.gnbArea .gnb dl dt.m01 a{background:url("../../images/img/img_gnb02_on.png") no-repeat center 23px;}
+.gnbArea .gnb dl dt.m04 a{background:url("../../images/img/img_gnb04_on.png") no-repeat center 23px;}
+.gnbArea .gnb dl dt.m07 a{background:url("../../images/img/img_gnb07_on.png") no-repeat center 23px;}
 
 .pageTitle{height:70px;background:#776c61 url("../../images/bg/bg_tit_ptn.png") no-repeat center 0;}
 .pageTitle .plate{position:relative;width:1100px;margin:0 auto;}
@@ -51,7 +58,7 @@
 .latestVideo{position:fixed;right:-514px;top:0;z-index:20;width:470px;padding:22px 22px 46px;background:#4a4639;display:none;}
 .latestVideo.active{display:block;}
 .latestVideo.scroll{overflow:hidden;overflow-x:hidden;overflow-y:auto;}
-.latestVideo ul{border-bottom:1px solid #5c594d;}
+.latestVideo ul{border-bottom:1px solid #5c594d;padding-top:5px;}
 .latestVideo ul li{padding:15px 0;border-top:1px solid #5c594d;}
 .latestVideo ul li:first-child{padding-top:0;border-top:0;}
 .latestVideo ul li a{display:block;color:#fff;line-height:1.4em;font-family:"nanum",Helvetica,Sans-serif;*zoom:1;}
