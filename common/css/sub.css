@@ -163,3 +163,20 @@
 .planTable table tbody tr td div.on{border:2px solid #eb6253;margin:-2px;}
 .planTable table tbody tr td div.off p{color:#aaa;}
 .planTable table tbody tr td div.on p a{padding-top:0;}
+
+.thumbList{margin-top:22px;}
+.thumbList > ul:after{content:"";display:block;clear:both;}
+.thumbList > ul > li{width:480px;float:left;border:1px solid #d7d7d7;padding:35px 0 35px 48px;}
+.thumbList > ul > li:first-child{margin-right:20px;}
+.thumbList > ul > li:after{content:"";display:block;clear:both;}
+.thumbList .thumb{width:138px;height:138px;overflow:hidden;background:#fff;border-radius:100%;float:left;margin-right:58px;}
+.thumbList .thumb img{width:100%;vertical-align:top;}
+.thumbList .info{padding-left:196px;}
+.thumbList .info p{position:relative;line-height:1.4em;font-family:"nanumbd";color:#464646;}
+.thumbList .info p:after{position:absolute;left:0;bottom:-20px;content:"";display:block;width:22px;height:2px;background:#ffd300;}
+.thumbList .info p span,
+.thumbList .info p em{display:block;}
+.thumbList .info p span{font-size:16px;}
+.thumbList .info p em{font-size:18px;}
+.thumbList .info > ul{margin-top:46px;}
+.thumbList .info > ul > li{padding-left:10px;line-height:1.6em;background:url("../../images/icon/icon_dot.jpg") no-repeat 0 10px;}
