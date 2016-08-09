@@ -180,3 +180,33 @@
 .thumbList .info p em{font-size:18px;}
 .thumbList .info > ul{margin-top:46px;}
 .thumbList .info > ul > li{padding-left:10px;line-height:1.6em;background:url("../../images/icon/icon_dot.jpg") no-repeat 0 10px;}
+
+.searchTab{border:1px solid #ccc;background:#fcfcfc;*zoom:1;}
+.searchTab:after{content:"";display:block;clear:both;}
+.searchTab li{width:182px;float:left;}
+.searchTab li a{height:52px;display:block;text-align:center;border-left:1px solid #ccc;}
+.searchTab li a span{display:block;padding-top:20px;}
+.searchTab li:first-child a{border-left:0;}
+.searchTab li:first-child{width:94px !important;} 
+.searchTab li.last{width:94px;}
+.searchTab li a:hover,
+.searchTab li.active a{height:42px;border:5px solid #ffd300;background:#fff;}
+.searchTab li a:hover span,
+.searchTab li.active a span{padding-top:15px;}
+
+.searchTables{border-bottom:1px solid #707784;border-top:1px solid #707784;}
+.searchTables table tbody tr th{padding:20px 0;border-top:1px solid #e1e1e1;color:#959595;font-weight:normal;}
+.searchTables table tbody tr td{padding:20px 0;border-top:1px solid #e1e1e1;border-left:1px solid #e1e1e1;text-align:center;}
+.searchTables table tbody tr td a{display:block;text-align:left;padding-left:38px;color:#464646;}
+.searchTables table tbody tr td a:hover{text-decoration:underline;}
+.searchTables table tbody tr:first-child th,
+.searchTables table tbody tr:first-child td{border-top:0;}
+
+.searchPlate{position:relative;width:487px;height:42px;border:1px solid #e1e1e1;margin:0 auto;}
+.searchPlate:after{content:"";display:block;clear:both;}
+.searchPlate *{float:left;}
+.searchPlate input[type="text"]{width:275px;height:42px;border:0;border-left:1px solid #e1e1e1;}
+.searchPlate .selectType01{border:0;margin-top:11px;}
+.searchPlate .selectType01 select{width:130px;}
+.searchPlate button{position:absolute;right:-2px;top:-1px;width:66px;height:44px;background:#707784;border-radius:3px;color:#fff;}
+
