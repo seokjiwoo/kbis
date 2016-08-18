@@ -74,19 +74,89 @@ var packageUI = (function(packageUI, $, undefined){
 			}
 		};
 		this.winResize = function(){
-			w = $(window).width();
-			if(w <= 1366){
-				$(this.sideMenu01).find(".list").addClass("scroll").css({height:520});
-				$(this.sideMenu02).find(".list").addClass("scroll").css({height:520});
-			}else if(w > 1366 && w < 1680){
-				$(this.sideMenu01).find(".list").addClass("scroll").css({height:795});
-				$(this.sideMenu02).find(".list").addClass("scroll").css({height:795});
-			}else if(w > 1680 && w < 1920){
-				$(this.sideMenu01).find(".list").addClass("scroll").css({height:850});
-				$(this.sideMenu02).find(".list").addClass("scroll").css({height:850});
-			}else if(w > 1920){
-				$(this.sideMenu01).find(".list").addClass("scroll").css({height:1200});
-				$(this.sideMenu02).find(".list").addClass("scroll").css({height:1200});
+			/*
+			특정해상도(화면 높이기준)보다 작거나 같을때 원하는 스크롤 height 값설정 
+			기본적으로 높이 768 ~ 2400 까지 분기처리
+			구간설정을 추가 하고 싶을때는 아래에 목록 참조
+
+			현존 하는 모니터 해상도
+			320  x  200 (16:10)
+			320  x  240 (4:3)
+			400  x  300 (4:3)
+			480  x  270 (16:9)
+			480  x  360 (4:3)
+			512  x  384 (4:3)
+			640  x  400 (16:10)
+			640  x  480 (4:3)
+			720  x  480 (3:2)
+			720  x  576 (5:4)
+			800  x  600 (4:3)
+			848  x  480
+			960  x  600 (16:10)
+			1024 x  768 (4:3)
+			1152 x  864 (4:3)
+			1280 x  720 (16:9)
+			1280 x  768 (5:3)
+			1280 x  800 (16:10)
+			1280 x  960 (4:3)
+			1280 x 1024 (5:4)
+			1360 x  768
+			1400 x 1050 (4:3)
+			2048 x 1080
+			2048 x 1536 (4:3)
+			2560 x 1600 (16:10)
+			2560 x 2048 (5:3)
+			3200 x 2048
+			3200 x 2400
+			3840 x 2400 (4:3)
+			4096 x 1716
+			4096 x 3072 (4:3)
+			5120 x 3200 (16:10)
+			5120 x 4096 (5:4)
+			6400 x 4096
+			6400 x 4800 (4:3)
+			7680 x 4800 (16:10)
+			1440 x  900 (16:10)
+			1600 x  900 (16:9)
+			1680 x 1050 (16:10)
+			1680 x 1200 (4:3)
+			1920 x 1080
+			1920 x 1200 (16:10)
+			1920 x 1440
+			2048 x 1536
+			2560 x 1600
+			*/
+			
+			h = $(window).height(); // 최초 사이트 들어올때 화면 높이값을 체크
+			var sideArea01 = $(this.sideMenu01).find(".list").addClass("scroll"), // 최신영상
+				 sideArea02 = $(this.sideMenu02).find(".list").addClass("scroll") // 베스트 영상
+			if(h <= 768){
+				sideArea01.css({height:588});
+				sideArea02.css({height:588});
+			}else if(h <= 800){
+				sideArea01.css({height:620});
+				sideArea02.css({height:620});
+			}else if(h <= 960){
+				sideArea01.css({height:780});
+				sideArea02.css({height:780});
+			}else if(h <= 1024){
+				sideArea01.css({height:850});
+				sideArea02.css({height:850});
+			}else if(h <= 1080){
+				sideArea01.css({height:900});
+				sideArea02.css({height:900});
+			}else if(h <= 1536){
+				sideArea01.css({height:1356});
+				sideArea02.css({height:1356});
+			}else if(h <= 1600){
+				sideArea01.css({height:1420});
+				sideArea02.css({height:1420});
+			} else if(h <= 2048){
+				sideArea01.css({height:1868});
+				sideArea02.css({height:1868});
+			}else if(h <= 2400){
+				sideArea01.css({height:2220});
+				sideArea02.css({height:2220});
 			}
 		}
 		this.init()
